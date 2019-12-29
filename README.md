@@ -1,6 +1,16 @@
 # Euclidean division and remainder
 Bart Massey
 
+**Note: Turns out that as of Rust 1.38 Rust includes
+`div_euclid()` and `rem_euclid()` in `std` for signed
+integer types. Their implementation is a little different
+(and a little simpler) than mine, but has more branches:
+I'll have to benchmark at some point to see which is faster.
+In any case, I would highly recommend not using my
+crate. I'll leave it up for historical interest.**
+
+## Background
+
 Many programming languages define integer division to either
 "truncate" / "round toward zero" (C, Rust) or "round down"
 (Python). In either case, the integer remainder will
