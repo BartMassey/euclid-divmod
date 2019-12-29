@@ -21,14 +21,17 @@ becomes
 
     a // b = sgn(b) * floor(a / abs(b))
 
-(See
+See
 [Wikipedia](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)
-for a thorough explanation.)
+for a thorough explanation: in particular a citation to
+Raymond Boute's paper
+[The Euclidean definition of the functions div and mod](https://dl.acm.org/citation.cfm?doid=128861.128862),
+which is definitely worth a read.
 
 Unfortunately, Euclidean division and remainder is awkward
 to implement directly in Rust in terms of its "normal" `%`
-and `/` operators. This crate provides a slow but correct
-implementation.
+and `/` operators. This crate provides a slow but (believed
+to be) correct implementation.
 
 ## License
 
